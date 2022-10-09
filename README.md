@@ -1,35 +1,43 @@
-/*# mini-Calculadora-Cientifica-em-C
-Projeto nota Final  - miniCalculadora Cientifica em C*/
+# mini-Calculadora-Cientifica-em-C
+Projeto nota Final  - miniCalculadora Cientifica em C
 #include <stdio.h>
 #include <stdlib.h>
 
   //funcao soma
+
 float soma (float num1, float num2)
 {
     float resultado = num1 + num2;
     return resultado;
 }
+
 // funcao subtracao
+
 float subtracao (float num1, float num2){
 float resultado = num1 - num2;
     return resultado;
 }
+
 // funcao multiplicacao
+
 float multiplicacao (float num1, float num2){
 float resultado = num1 * num2;
     return resultado;
 }
+
 //funcao divisao
+
 float divisao(float num1, float num2){
   float resultado=num1/num2;
   return resultado;
 }
+
 //funcao da raiz
+
 float raiz(float num1, float num2) {
 
     int n, i; 
     float resultado=0;
-    //for(i=0; i>=10;i++);
     num1 = num2;
     for (n = 0; n < 10; ++n){
     num2 = num2/2 + num1/(2*num2);
@@ -37,7 +45,9 @@ float raiz(float num1, float num2) {
    }
   return resultado;
   }
+
 // funcao da potencia
+
 float potencia(float num1, float num2){
   
    float resultado=1, i; 
@@ -47,9 +57,11 @@ float potencia(float num1, float num2){
    }
   return resultado;
 }
+
 //funcao fatorial
+
 float fatorial(float num1, float num2){
-    num2 = 1;
+num2 = 1;
 
     float resultado;
     for (int i = 1; i <= num1; i++) {
@@ -58,7 +70,9 @@ float fatorial(float num1, float num2){
     }
   return resultado; 
   }
+
 //função segundo grau
+
 float raiz_grau2(float num1, float num2, float num3){
 #include <math.h>
   float resultado;
@@ -88,6 +102,7 @@ return resultado;
 
 
 // escopo principal do codigo
+
 int main(void) {
     
 float resultado_raiz[3];
@@ -95,11 +110,13 @@ float resultado1[0], resultado2, numero2, numero3;
 int operacao;
 
 //label de retorno pós submissao de limpeza
+
 pos_limpeza:
 printf("Número: ");
 scanf("%f", &resultado1[0]);
 
 //repetiçao do menu
+
 while (operacao != 11)
 {
     printf("\nNúmero: %.2f\n", resultado1[0]);
@@ -112,10 +129,12 @@ while (operacao != 11)
         printf("press [6] -- POTÊNCIAÇÃO\n");
         printf("press [7] -- FATORIAL\n");
         printf("press [8] -- RAIZES REAIS DO SEGUNDO GRAU\t(ao executar este comando, automaticamente o numero inserido por você será apagado\nao fim, escolha uma das duas raizes para continuar!\n");
-      //  printf("press [9] -- RAIZES REAIS DO TERCEIRO GRAU\n");
+
+//  printf("press [9] -- RAIZES REAIS DO TERCEIRO GRAU\n");
+
         printf("press [10] -- LIMPAR\n");
         printf("press [11] -- SAIR\n\n");
-    scanf("%d", &operacao);
+    	scanf("%d", &operacao);
 
   switch (operacao){
     case 1:{
@@ -159,7 +178,6 @@ while (operacao != 11)
     }
     case 5:{
       printf("\n√%.1f ", resultado1[0]);
-      //scanf("%f", &numero2);
       numero2=resultado1[0];
       float raiz(float num1, float num2);
       resultado2 = raiz(resultado1[0], numero2);
@@ -187,8 +205,11 @@ while (operacao != 11)
       
     }
     case 9: {
+      
       // raizes de terceiro grau
-    }
+   
+   }
+    
     case 10:{
       goto pos_limpeza;
     }
